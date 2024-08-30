@@ -11,12 +11,11 @@ class Summary {
             hours: 0,
             minutes: 0,
             seconds: 0,
-            //characters per minute
             cpm: 0
         });
     }
     /**
-     * updates the given state
+
      * @param  {Immutable.Map} state
      * @param  {Number} options.passed
      * @param  {Number} options.failed

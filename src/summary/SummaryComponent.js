@@ -17,6 +17,7 @@ class SummaryComponent extends Component {
                 <div className="header">
                     <div className="currentChar shadow">
                         <h6>{this.props.currentChar.toUpperCase()}</h6>
+                        
                     </div>
                 </div>
                 <CharacterSelector />

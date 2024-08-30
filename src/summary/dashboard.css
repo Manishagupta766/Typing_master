@@ -1,29 +1,68 @@
 .dashboard {
     background-color: #f5f8fa;
-    padding: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .progress {
-    height: 1.5rem;
+    height: 2rem;
     color: black;
-    overflow: hidden;
     font-size: 1rem;
-    font-size: bold;
+    font-weight: bold;
     width: 100%;
-    background-color: #fff;
-    border-radius: 0;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
 .progress-bar {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #2779bd;
-    transition: width 0.6s ease;
+    background: linear-gradient(90deg, #f3a683, #f7d794);
+    transition: width 0.6s ease, background 0.3s ease;
     height: 100%;
-    padding: 5px;
+    line-height: 2rem;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    mix-blend-mode: overlay;
+    transition: width 0.6s ease;
+}
+
+.progress-bar:hover {
+    background: linear-gradient(90deg, #ffb8b8, #ff6b6b);
 }
 
 .progress-danger {
     background-color: #e3342f90;
+    border-radius: 8px;
+}
+
+.progress-danger .progress-bar {
+    background: linear-gradient(90deg, #e3342f, #f05050);
+}
+
+.progress-danger .progress-bar:hover {
+    background: linear-gradient(90deg, #ff6b6b, #ffb8b8);
 }

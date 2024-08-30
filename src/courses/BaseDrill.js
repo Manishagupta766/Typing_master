@@ -7,6 +7,7 @@ export default class BaseDrill {
         this.course = course;
         this.wordIndex = 0;
         this.currentIndex = 0;
+        
         this.setCurrentWord();
     }
 
